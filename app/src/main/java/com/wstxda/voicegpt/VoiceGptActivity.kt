@@ -17,7 +17,7 @@ class VoiceGptActivity : Activity() {
     private lateinit var sharedPreferences: SharedPreferences
 
     companion object {
-        private const val CHAT_GPT_PACKAGE = "com.openai.chatgpt"
+        private const val CHAT_GPT_PACKAGE = "com.google.android.googlequicksearchbox"
         private const val PREFERENCES_NAME = "VoiceGptPrefs"
         private const val DIALOG_SHOWN_KEY = "dialogShown"
     }
@@ -72,7 +72,7 @@ class VoiceGptActivity : Activity() {
             action = Intent.ACTION_MAIN
             addCategory(Intent.CATEGORY_LAUNCHER)
             component =
-                ComponentName(CHAT_GPT_PACKAGE, "com.openai.voice.assistant.AssistantActivity")
+                ComponentName(CHAT_GPT_PACKAGE, "com.google.android.voiceinteraction.GsaVoiceInteractionService")
         }
         try {
             startActivity(intent)
